@@ -19,7 +19,7 @@ Get API STATUS
 #### Get notices by category
 
 ```http
-  GET /info/{Parameter}
+  GET /info/{Parameter}/
 ```
 
 | Parameter | Type     | Notice type                |
@@ -33,7 +33,7 @@ Get API STATUS
 #### Get Student information **(Takes time)**
 
 ```http
-  GET /student-info/:name/:password
+  GET /student-info/:name/:password/
 ```
 
 | Parameter | Type     | Description                       |
@@ -44,7 +44,7 @@ Get API STATUS
 #### search professor via query
 
 ```http
-  GET /search/professor_id/:query
+  GET /search/professor_id/:query/
 ```
 
 | Parameter | Type     | Description                       |

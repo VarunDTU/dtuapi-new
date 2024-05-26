@@ -78,22 +78,22 @@ setInterval(() => {
   request_notices();
 }, 5000);
 
-app.get("/info/latestnews", async (req, res) => {
+app.get("/info/latestnews/", async (req, res) => {
   res.status(200).send(latest_news);
 });
-app.get("/info/notices", (req, res) => {
+app.get("/info/notices/", (req, res) => {
   res.status(200).send(not);
 });
-app.get("/info/jobs", (req, res) => {
+app.get("/info/jobs/", (req, res) => {
   res.status(200).send(jobs);
 });
-app.get("/info/tenders", (req, res) => {
+app.get("/info/tenders/", (req, res) => {
   res.status(200).send(tenders);
 });
-app.get("/info/events", (req, res) => {
+app.get("/info/events/", (req, res) => {
   res.status(200).send(events);
 });
-app.get("/info/firstyear", (req, res) => {
+app.get("/info/firstyear/", (req, res) => {
   res.status(200).send(firstyears);
 });
 
@@ -107,7 +107,7 @@ app.get("/", async (req, res) => {
     );
   }
 });
-app.get("/student-info/:name/:password", async function (req, res) {
+app.get("/student-info/:name/:password/", async function (req, res) {
   const name = req.params.name.replace(/_/g, "/");
 
   const password = decodeURI(req.params.password);
@@ -118,7 +118,7 @@ app.get("/student-info/:name/:password", async function (req, res) {
   const ans = await get_user_info(name, password);
   res.status(200).send(ans);
 });
-app.get("/search/professor_id/:query", async function (req, res) {
+app.get("/search/professor_id/:query/", async function (req, res) {
   const query = req.params.query;
 
   res.status(200).send(await Get_profesor_ids(query));
